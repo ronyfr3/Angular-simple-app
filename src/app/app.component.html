@@ -27,16 +27,20 @@
   <main class="flex-auto w-full h-screen">
     <!-- <app-add-todo></app-add-todo>
     <app-todo></app-todo> -->
-    <section class="relative bg-black text-left pb-0 bg-cover bg-center w-full h-screen">
+    <section
+      class="relative bg-black text-left pb-0 bg-cover bg-center w-full h-screen"
+    >
       <div
         class="px-6 sm:px-12 lg:px-16 xl:px-24 xxl:px-40 flex items-center justify-center overflow-hidden relative min-h-[540px] h-full"
       >
         <div class="overflow-hidden">
           <video
             class="object-cover h-full min-h-[56.25vw] absolute left-[50%] top-[50%] z-10 translate-x-[-50%] translate-y-[-50%] opacity-70"
+            loop
             muted
             autoplay
-            loop
+            oncanplay="this.play()"
+            onloadedmetadata="this.muted = true"
           >
             <source src="../assets/bannerVideo.mp4" type="video/mp4" />
           </video>
@@ -50,8 +54,8 @@
             class="text-white md:text-4xl mb-8 lg:text-[3rem] text-[30px] p-0 m-0 leading-[2.5rem] lg:leading-[3.4rem]"
           >
             Your Tech Partner for SMEs and StartupsMobile Applications
-            Enterprise Solutions Partner
-            Website & Ecommerce Business & much more.
+            Enterprise Solutions Partner Website & Ecommerce Business & much
+            more.
           </h1>
           <p class="text-gray-200 mb-6 font-[400] text-[16px] leading-[1.9rem]">
             Let’s have a chat
